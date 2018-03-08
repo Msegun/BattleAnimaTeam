@@ -13,8 +13,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'byebug', platform: :mri
   gem 'sqlite3'
+  gem "paperclip", "~> 5.2.1"
 end
 
 group :production do

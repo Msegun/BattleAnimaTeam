@@ -16,6 +16,10 @@
       <%= @team.date_of_founding.strftime("%d.%m.%Y") %>
     </p>
 
+    <p>
+        <%= image_tag @team.image.url(:thumb) %>
+    </p>
+
     <% if @team.players.count > 0 %>
     <p>
       <strong>Players:</strong>

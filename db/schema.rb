@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_06_131741) do
+ActiveRecord::Schema.define(version: 2018_03_08_135218) do
 
   create_table "matches", force: :cascade do |t|
     t.integer "team_one_id"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 2018_03_06_131741) do
     t.date "date_of_founding"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

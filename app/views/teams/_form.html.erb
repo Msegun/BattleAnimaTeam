@@ -14,10 +14,12 @@
     <tr>
       <td><%= form.label :name, :class => "control-label col-md-1" %></td>
       <td><%= form.text_field :name %></td>
+      <td><%= form.file_field :image %></td>
     </tr>
     <tr>
       <td><%= form.label "Foundation", :class => "control-label col-md-1" %></td>
       <td><%= form.date_select :date_of_founding, :start_year=>1900, :order=>[:day, :month, :year] %></td>
+      <td></td>
     </tr>
   </table>
   <div class="field" style="margin-top: 10px;">
