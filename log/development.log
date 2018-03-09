@@ -25458,74 +25458,89 @@ Processing by PlayersController#index as HTML
 Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.7ms)
 
 
-Started GET "/" for 127.0.0.1 at 2018-03-08 14:23:48 +0100
+Started GET "/" for 127.0.0.1 at 2018-03-09 10:30:26 +0100
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/hergroth/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
-  Rendered pages/index.html.erb within layouts/application (0.5ms)
-Completed 200 OK in 200ms (Views: 192.9ms | ActiveRecord: 0.0ms)
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 392ms (Views: 378.7ms | ActiveRecord: 0.0ms)
 
 
-Started GET "/players" for 127.0.0.1 at 2018-03-08 14:23:50 +0100
-Processing by PlayersController#index as HTML
-  Rendering players/index.html.erb within layouts/application
-  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
-  ↳ app/views/players/index.html.erb:25
-  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  Rendered players/index.html.erb within layouts/application (27.5ms)
-Completed 200 OK in 60ms (Views: 52.2ms | ActiveRecord: 1.6ms)
+Started GET "/matches" for 127.0.0.1 at 2018-03-09 10:30:29 +0100
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/views/matches/index.html.erb:24
+  Rendered matches/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 19.6ms | ActiveRecord: 0.4ms)
 
 
-Started GET "/teams" for 127.0.0.1 at 2018-03-08 14:23:51 +0100
+Started GET "/teams" for 127.0.0.1 at 2018-03-09 10:30:30 +0100
 Processing by TeamsController#index as HTML
   Rendering teams/index.html.erb within layouts/application
-  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
   ↳ app/views/teams/index.html.erb:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
   ↳ app/views/teams/index.html.erb:27
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 6]]
   ↳ app/views/teams/index.html.erb:27
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 7]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 7]]
   ↳ app/views/teams/index.html.erb:27
-  Rendered teams/index.html.erb within layouts/application (10.8ms)
-Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.8ms)
+  Rendered teams/index.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 69ms (Views: 61.4ms | ActiveRecord: 2.1ms)
 
 
-Started GET "/matches" for 127.0.0.1 at 2018-03-08 14:23:52 +0100
+Started GET "/matches" for 127.0.0.1 at 2018-03-09 10:30:31 +0100
 Processing by MatchesController#index as HTML
   Rendering matches/index.html.erb within layouts/application
-  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
   ↳ app/views/matches/index.html.erb:24
-  Rendered matches/index.html.erb within layouts/application (1.9ms)
-Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+  Rendered matches/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms)
 
 
-Started GET "/players" for 127.0.0.1 at 2018-03-08 14:23:53 +0100
-Processing by PlayersController#index as HTML
-  Rendering players/index.html.erb within layouts/application
-  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
-  ↳ app/views/players/index.html.erb:25
-  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
-  ↳ app/views/players/index.html.erb:32
-  Rendered players/index.html.erb within layouts/application (15.2ms)
-Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.9ms)
+Started GET "/teams" for 127.0.0.1 at 2018-03-09 10:30:32 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 7]]
+  ↳ app/views/teams/index.html.erb:27
+  Rendered teams/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams/4" for 127.0.0.1 at 2018-03-09 10:30:33 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:46
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/show.html.erb:23
+  Rendered teams/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 44ms (Views: 38.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-09 10:30:34 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:27
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:27
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 7]]
+  ↳ app/views/teams/index.html.erb:27
+  Rendered teams/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 1.1ms)
 
 
