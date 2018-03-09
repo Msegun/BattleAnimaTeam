@@ -26263,3 +26263,107 @@ Processing by MatchesController#index as HTML
 Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-09 10:50:18 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hergroth/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 185ms (Views: 177.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2018-03-09 10:50:19 +0100
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/views/matches/index.html.erb:24
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  Rendered matches/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 52ms (Views: 44.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2018-03-09 10:50:37 +0100
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/views/matches/index.html.erb:24
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  Rendered matches/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/matches/17/edit" for 127.0.0.1 at 2018-03-09 10:50:40 +0100
+Processing by MatchesController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:48
+  Rendering matches/edit.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/views/matches/_form.html.erb:16
+  Rendered matches/_form.html.erb (9.8ms)
+  Rendered matches/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2018-03-09 10:50:42 +0100
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/views/matches/index.html.erb:24
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  Rendered matches/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/matches/17" for 127.0.0.1 at 2018-03-09 10:50:43 +0100
+Processing by MatchesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" WHERE "matches"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/matches_controller.rb:48
+  Rendering matches/show.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:12
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/matches/show.html.erb:21
+  Rendered matches/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2018-03-09 10:50:44 +0100
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/views/matches/index.html.erb:24
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  Rendered matches/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.9ms)
+
+
