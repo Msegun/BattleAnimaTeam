@@ -1,0 +1,36 @@
+<p id="notice" class="text-center"><%= notice %></p>
+
+<div class="container">
+    <div class="d-inline-block">
+        <h2>Match (<%= @match.id %>): '<%= @match.team_one.name %>' vs. '<%= @match.team_two.name %>'</h2>
+    </div>
+
+    <hr />
+
+    <p>
+      <strong>Team one:</strong>
+      <%= link_to @match.team_one.name, @match.team_one %>
+    </p>
+
+    <p>
+      <strong>Team two:</strong>
+      <%= link_to @match.team_two.name, @match.team_two %>
+    </p>
+
+    <p>
+      <strong>Result:</strong>
+      <%= @match.result %>
+    </p>
+
+    <p>
+      <strong>Date:</strong>
+      <%= @match.date.strftime("%d.%m.%Y") %>
+    </p>
+
+    <hr />
+
+    <%= link_to 'Edit', edit_match_path(@match), :class => "btn btn-success btn-sm" %>
+    <%= link_to 'Delete', @match, method: :delete, data: { confirm: 'Are you sure you want to delete this match?' }, :class => "btn btn-danger btn-sm" %>
+    <%= link_to 'Back', matches_path, :class => "btn btn-primary btn-sm" %>
+
+</div>
