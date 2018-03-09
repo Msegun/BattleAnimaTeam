@@ -1,9 +1,15 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   def index
-    @teams = Team.all
-  end
+    if params[:search]
+      @teams = Team.search(params[:search]).order("created_at DESC")
+    else
+      @teams = Team.all.order("#{sort_column} #{sort_direction}")
+    end
+end
+
 
   def show
   end
@@ -49,5 +55,17 @@ class TeamsController < ApplicationController
 
     def team_params
       params.require(:team).permit(:name, :date_of_founding)
+    end
+
+    def sortable_columns
+      ["name", "date_of_founding"]
+    end
+
+    def sort_column
+      sortable_columns.include?(params[:column]) ? params[:column] : "name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

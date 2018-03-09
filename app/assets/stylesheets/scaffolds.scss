@@ -228,6 +228,30 @@ table {
   border-collapse: collapse;
 }
 
+.indexborders {
+  border-left: 1px solid #F0F0F0;
+  border-right: 1px solid #F0F0F0;
+  width:5%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+th {
+  text-align: inherit;
+}
+
+.index td:hover {
+  background-color: #4E5D6C;
+}
+
+.btncenter {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -236,9 +260,6 @@ caption {
   caption-side: bottom;
 }
 
-th {
-  text-align: inherit;
-}
 
 label {
   display: inline-block;
@@ -1708,6 +1729,19 @@ pre code {
 .table-sm td {
   padding: 0.3rem;
 }
+
+// table td
+.textfield {
+  text-align: left;
+}
+
+.nontextfield {
+  text-align: right;
+}
+
+
+
+
 
 .table-bordered {
   border: 1px solid #dee2e6;

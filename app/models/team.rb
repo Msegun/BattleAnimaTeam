@@ -17,4 +17,9 @@ class Team < ApplicationRecord
      errors.add("Date of founding", "cannot be in the future")
    end
   end
+
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%") 
+  end
+
 end

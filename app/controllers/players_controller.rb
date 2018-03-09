@@ -1,8 +1,13 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   def index
-    @players = Player.all
+    if params[:search]
+      @players = Player.search(params[:search]).order("created_at DESC")
+    else
+      @players = Player.order("#{sort_column} #{sort_direction}")
+    end
   end
 
   def show
@@ -50,5 +55,17 @@ class PlayersController < ApplicationController
 
     def player_params
       params.require(:player).permit(:name, :surname, :nickname, :salary, :date_of_birth, :team_id)
+    end
+
+    def sortable_columns
+      ["name", "surname", "nickname", "date_of_birth"]
+    end
+
+    def sort_column
+      sortable_columns.include?(params[:column]) ? params[:column] : "name"
+    end
+
+    def sort_direction
+      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 end

@@ -34,5 +34,9 @@ class Player < ApplicationRecord
      errors.add("Player must be at least", "12 years old")
    end
   end
-  
+
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%")
+  end
+
 end

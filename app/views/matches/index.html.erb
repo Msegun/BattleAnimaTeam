@@ -5,46 +5,44 @@
         <h1>Match History</h1>
     </div>
     <br/>
-    <div class="d-inline-block float-left" style="margin-top: 10px;">
+    <div class="d-inline-block float-right" style="margin-top: 10px;">
         <%= link_to 'Add Match', new_match_path, :class => "btn btn-primary btn-sm" %>
     </div>
 
-    <table class="table table-stripped table-hover">
+    <table class="table table-stripped table-hover  index indexborders">
       <thead>
         <tr>
-          <th>First team</th>
-          <th>Second team</th>
-          <th>Result</th>
-          <th>Date</th>
-          <th colspan="3"></th>
+          <th class="indexborders">First team</th>
+          <th class="indexborders">Second team</th>
+          <th class="indexborders">Result</th>
+          <th class="indexborders">Date</th>
+          <th class="indexborders" colspan="3"></th>
         </tr>
       </thead>
 
       <tbody>
         <% @matches.each do |match| %>
           <tr>
-            <td>
+            <td class="textfield indexborders">
               <% if match.team_one != nil %>
                 <%= link_to match.team_one.name, match.team_one%>
               <% else %>
                 <i>Team does not exist</i>
               <% end %>
             </td>
-            <td>
+            <td class="textfield indexborders">
               <% if match.team_two != nil %>
                 <%= link_to match.team_one.name, match.team_one%>
               <% else %>
                 <i>Team does not exist</i>
               <% end %>
             </td>
-            <td><%= match.result %></td>
-            <td><%= match.date %></td>
-            <td>
-              <div class="d-inline-block float-right">
+            <td class="nontextfield indexborders"><%= match.result %></td>
+            <td class="nontextfield indexborders"><%= match.date %></td>
+            <td align=center class="indexborders">
                 <%= link_to 'Show', match , :class => "btn btn-warning btn-sm" %>
                 <%= link_to 'Edit', edit_match_path(match), :class => "btn btn-success btn-sm" %>
                 <%= link_to 'Delete', match, method: :delete, data: { confirm: 'Are you sure you want to delete this match?' }, :class => "btn btn-danger btn-sm" %>
-              </div>
             </td>
           </tr>
         <% end %>
