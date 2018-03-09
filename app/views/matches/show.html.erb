@@ -2,19 +2,27 @@
 
 <div class="container">
     <div class="d-inline-block">
-        <h2>Match (<%= @match.id %>): '<%= @match.team_one.name %>' vs. '<%= @match.team_two.name %>'</h2>
+        <h2>Match (<%= @match.id %>)</h2>
     </div>
 
     <hr />
 
     <p>
       <strong>Team one:</strong>
-      <%= link_to @match.team_one.name, @match.team_one %>
+      <% if @match.team_one != nil %>
+        <%= link_to @match.team_one.name, @match.team_one %>
+      <% else %>
+        <i>Team does not exist</i>
+      <% end %>
     </p>
 
     <p>
       <strong>Team two:</strong>
-      <%= link_to @match.team_two.name, @match.team_two %>
+      <% if @match.team_two != nil %>
+        <%= link_to @match.team_two.name, @match.team_two %>
+      <% else %>
+        <i>Team does not exist</i>
+      <% end %>
     </p>
 
     <p>

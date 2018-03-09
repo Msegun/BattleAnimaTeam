@@ -23,8 +23,20 @@
       <tbody>
         <% @matches.each do |match| %>
           <tr>
-            <td><%= link_to match.team_one.name, match.team_one%></td>
-            <td><%= link_to match.team_two.name, match.team_two%></td>
+            <td>
+              <% if match.team_one != nil %>
+                <%= link_to match.team_one.name, match.team_one%>
+              <% else %>
+                <i>Team does not exist</i>
+              <% end %>
+            </td>
+            <td>
+              <% if match.team_two != nil %>
+                <%= link_to match.team_one.name, match.team_one%>
+              <% else %>
+                <i>Team does not exist</i>
+              <% end %>
+            </td>
             <td><%= match.result %></td>
             <td><%= match.date %></td>
             <td>

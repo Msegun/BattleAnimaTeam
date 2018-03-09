@@ -33,9 +33,10 @@ class TeamsController < ApplicationController
     end
   end
 
-  def destroy #wraz z usunieciem druzyny usuwamy jej historie meczy
-    Match.where(:team_one_id => @team.id).destroy_all
-    Match.where(:team_two_id => @team.id).destroy_all
+  def destroy
+    #wraz z usunieciem druzyny usuwamy jej historie meczy -> kaskadowe usuwanie
+    #Match.where(:team_one_id => @team.id).destroy_all
+    #Match.where(:team_two_id => @team.id).destroy_all
     @team.destroy
     redirect_to teams_path, notice: 'Team was successfully deleted.'
   end
