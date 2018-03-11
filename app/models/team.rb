@@ -1,4 +1,5 @@
 class Team < ApplicationRecord
+  has_one_attached :image
   has_many :players
   validates :name, :length => { :in => 3..20 }, :format => { :with => /\A[A-Za-z-. ]+\z/ }
   validate :date_of_founding_in_future?
@@ -19,7 +20,7 @@ class Team < ApplicationRecord
   end
 
   def self.search(search)
-    where("name LIKE ?", "%#{search}%") 
+    where("name LIKE ?", "%#{search}%")
   end
 
 end

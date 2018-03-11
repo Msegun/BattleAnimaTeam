@@ -54,7 +54,7 @@ end
     end
 
     def team_params
-      params.require(:team).permit(:name, :date_of_founding)
+      params.require(:team).permit(:name, :date_of_founding, :image)
     end
 
     def sortable_columns

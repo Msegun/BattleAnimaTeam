@@ -31539,3 +31539,581 @@ Processing by TeamsController#index as HTML
 Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 09:58:42 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 2095ms (Views: 2081.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2018-03-11 09:58:46 +0100
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (14.7ms)
+  Rendered teams/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 09:58:47 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+Migrating to CreateActiveStorageTables (20180311090008)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180311090008_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180311090008_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  ↳ db/migrate/20180311090008_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180311090008_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  ↳ db/migrate/20180311090008_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20180311090008_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180311090008"]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (130.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 10:01:16 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 160ms (Views: 148.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams/10" for 127.0.0.1 at 2018-03-11 10:01:19 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/show.html.erb:19
+  Rendered teams/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 10:01:20 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 10:04:42 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 184ms (Views: 172.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/teams/9" for 127.0.0.1 at 2018-03-11 10:04:44 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/show.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 63ms (Views: 58.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 10:04:45 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2018-03-11 10:04:46 +0100
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (8.5ms)
+  Rendered teams/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 127.0.0.1 at 2018-03-11 10:04:55 +0100
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZT8KAZw9TAseHUdNZ4Cim2R/RR0KL4IXTpw0Fl5eoFXvrkaXbQx1t6aQGktNR/ggqQ+KwDwCmXYJ0ydFYXPrmQ==", "team"=>{"name"=>"Virtus Pro", "date_of_founding(3i)"=>"11", "date_of_founding(2i)"=>"3", "date_of_founding(1i)"=>"2018", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f0c24dcc080 @tempfile=#<Tempfile:/tmp/RackMultipart20180311-6442-1084bzj.png>, @original_filename="Virtus_Pro.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"team[image]\"; filename=\"Virtus_Pro.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Save"}
+[36m  Disk Storage (2.5ms) [0m[32mUploaded file to key: VL1uUEQi4V9t1nTEigiP7rnH (checksum: GtAvhK5Dtzrw03G2snD2YQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:25
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "VL1uUEQi4V9t1nTEigiP7rnH"], ["filename", "Virtus_Pro.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 83012], ["checksum", "GtAvhK5Dtzrw03G2snD2YQ=="], ["created_at", "2018-03-11 09:04:55.536772"]]
+  ↳ app/controllers/teams_controller.rb:25
+  [1m[35m (97.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teams_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:27
+  [1m[36mTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" IS NOT NULL AND "teams"."name" = ? LIMIT ?[0m  [["name", "Virtus Pro"], ["LIMIT", 1]]
+  ↳ app/models/team.rb:11
+  [1m[36mTeam Create (0.2ms)[0m  [1m[32mINSERT INTO "teams" ("name", "date_of_founding", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Virtus Pro"], ["date_of_founding", "2018-03-11"], ["created_at", "2018-03-11 09:04:55.674750"], ["updated_at", "2018-03-11 09:04:55.674750"]]
+  ↳ app/controllers/teams_controller.rb:27
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Team"], ["record_id", 11], ["blob_id", 1], ["created_at", "2018-03-11 09:04:55.677717"]]
+  ↳ app/controllers/teams_controller.rb:27
+  [1m[36mTeam Update All (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = '2018-03-11 09:04:55.679345' WHERE "teams"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/teams_controller.rb:27
+  [1m[35m (81.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teams_controller.rb:27
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467) to Async(default) with arguments: #<GlobalID:0x00007f0c108fb0b0 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467] Performing ActiveStorage::AnalyzeJob (Job ID: f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467) from Async(default) with arguments: #<GlobalID:0x00007f0bf406b718 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467]   [1m[35m (88.4ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467] Performed ActiveStorage::AnalyzeJob (Job ID: f4e1e1fc-c8ca-4aa6-afd8-5d7c8d8c0467) from Async(default) in 94.38ms
+Redirected to http://localhost:3000/teams/11
+Completed 302 Found in 417ms (ActiveRecord: 181.2ms)
+
+
+Started GET "/teams/11" for 127.0.0.1 at 2018-03-11 10:04:55 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8042a65e4102dbb3abe752879aec4c33c5d3c1e/Virtus_Pro.png" for 127.0.0.1 at 2018-03-11 10:04:55 +0100
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8042a65e4102dbb3abe752879aec4c33c5d3c1e", "filename"=>"Virtus_Pro"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (2.9ms) [0m[34mGenerated URL for file at key: VL1uUEQi4V9t1nTEigiP7rnH (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXVERGMVZVVlJhVFJXT1hReGJsUkZhV2RwVURkeWJrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MDk6NTUuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--db9081164b7eee7f0c91743cc44bb32793bfa1ad/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXVERGMVZVVlJhVFJXT1hReGJsUkZhV2RwVURkeWJrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MDk6NTUuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--db9081164b7eee7f0c91743cc44bb32793bfa1ad/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXVERGMVZVVlJhVFJXT1hReGJsUkZhV2RwVURkeWJrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MDk6NTUuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--db9081164b7eee7f0c91743cc44bb32793bfa1ad/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png" for 127.0.0.1 at 2018-03-11 10:04:56 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Virtus_Pro.png\"; filename*=UTF-8''Virtus_Pro.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXVERGMVZVVlJhVFJXT1hReGJsUkZhV2RwVURkeWJrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MDk6NTUuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--db9081164b7eee7f0c91743cc44bb32793bfa1ad", "filename"=>"Virtus_Pro"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: VL1uUEQi4V9t1nTEigiP7rnH[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.5ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/11" for 127.0.0.1 at 2018-03-11 10:05:05 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 185ms (Views: 165.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXVERGMVZVVlJhVFJXT1hReGJsUkZhV2RwVURkeWJrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MDk6NTUuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--db9081164b7eee7f0c91743cc44bb32793bfa1ad/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png" for 127.0.0.1 at 2018-03-11 10:05:06 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Virtus_Pro.png\"; filename*=UTF-8''Virtus_Pro.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFXVERGMVZVVlJhVFJXT1hReGJsUkZhV2RwVURkeWJrZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MDk6NTUuOTk0WiIsInB1ciI6ImJsb2Jfa2V5In19--db9081164b7eee7f0c91743cc44bb32793bfa1ad", "filename"=>"Virtus_Pro"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: VL1uUEQi4V9t1nTEigiP7rnH[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/11/edit" for 127.0.0.1 at 2018-03-11 10:05:08 +0100
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (7.8ms)
+  Rendered teams/edit.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/teams/11" for 127.0.0.1 at 2018-03-11 10:05:19 +0100
+Processing by TeamsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zXRTAyTtvth7cth6Rh12HPLqnKK+NfxcKdhBU5T2tCDRC06vsT7iuHF+aZ+DJYcOJqHGTx9TR7BvGQaAYqrhSw==", "team"=>{"name"=>"Virtus Pro", "date_of_founding(3i)"=>"11", "date_of_founding(2i)"=>"3", "date_of_founding(1i)"=>"2018", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000000003b209a0 @tempfile=#<Tempfile:/tmp/RackMultipart20180311-6477-mymzxq.png>, @original_filename="8829382.jpg.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"team[image]\"; filename=\"8829382.jpg.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Save", "id"=>"11"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/teams_controller.rb:35
+[36m  Disk Storage (6.1ms) [0m[32mUploaded file to key: TxXzBXDEwN7YzCX6MaERCQsH (checksum: /xQWxwUi9HcYwm+0qjr1uQ==)[0m
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "TxXzBXDEwN7YzCX6MaERCQsH"], ["filename", "8829382.jpg.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 1299774], ["checksum", "/xQWxwUi9HcYwm+0qjr1uQ=="], ["created_at", "2018-03-11 09:05:19.227488"]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Team"], ["record_id", 11], ["blob_id", 2], ["created_at", "2018-03-11 09:05:19.250251"]]
+  ↳ app/controllers/teams_controller.rb:35
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: a8852fbf-7c6d-4781-96ba-f8391dab129e) to Async(default) with arguments: #<GlobalID:0x00007f0231825930 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/1>>
+  [1m[36mTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" != ? AND "teams"."name" = ? LIMIT ?[0m  [["id", 11], ["name", "Virtus Pro"], ["LIMIT", 1]]
+  ↳ app/models/team.rb:11
+  [1m[36mTeam Update All (0.2ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = '2018-03-11 09:05:19.251587' WHERE "teams"."id" = ?[0m  [["id", 11]]
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:35
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (97.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e] Performing ActiveStorage::PurgeJob (Job ID: a8852fbf-7c6d-4781-96ba-f8391dab129e) from Async(default) with arguments: #<GlobalID:0x00007f023195fcd8 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/1>>
+  ↳ app/controllers/teams_controller.rb:35
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e] [36m  Disk Storage (2.0ms) [0m[31mDeleted file from key: VL1uUEQi4V9t1nTEigiP7rnH[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/VL1uUEQi4V9t1nTEigiP7rnH/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   [1m[36mActiveStorage::Blob Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?[0m  [["id", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   [1m[35m (77.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [a8852fbf-7c6d-4781-96ba-f8391dab129e] Performed ActiveStorage::PurgeJob (Job ID: a8852fbf-7c6d-4781-96ba-f8391dab129e) from Async(default) in 94.33ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 64d10196-5722-4eac-ab66-3109cede60bc) to Async(default) with arguments: #<GlobalID:0x00007f0231ce3b98 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/2>>
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc] Performing ActiveStorage::AnalyzeJob (Job ID: 64d10196-5722-4eac-ab66-3109cede60bc) from Async(default) with arguments: #<GlobalID:0x00007f0231cc4900 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc]   [1m[35m (80.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [64d10196-5722-4eac-ab66-3109cede60bc] Performed ActiveStorage::AnalyzeJob (Job ID: 64d10196-5722-4eac-ab66-3109cede60bc) from Async(default) in 87.96ms
+Redirected to http://localhost:3000/teams/11
+Completed 302 Found in 387ms (ActiveRecord: 99.4ms)
+
+
+Started GET "/teams/11" for 127.0.0.1 at 2018-03-11 10:05:19 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--956e35bbf7e7557d8f4fc215a4db9bec4753c2f5/8829382.jpg.png" for 127.0.0.1 at 2018-03-11 10:05:19 +0100
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--956e35bbf7e7557d8f4fc215a4db9bec4753c2f5", "filename"=>"8829382.jpg"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: TxXzBXDEwN7YzCX6MaERCQsH (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFVZUZoNlFsaEVSWGRPTjFsNlExZzJUV0ZGVWtOUmMwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MTkuNzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--2a6e0a01761f0fbcb74c7443d40e9193ee066a7d/8829382.jpg.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%228829382.jpg.png%22%3B+filename%2A%3DUTF-8%27%278829382.jpg.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFVZUZoNlFsaEVSWGRPTjFsNlExZzJUV0ZGVWtOUmMwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MTkuNzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--2a6e0a01761f0fbcb74c7443d40e9193ee066a7d/8829382.jpg.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%228829382.jpg.png%22%3B+filename%2A%3DUTF-8%27%278829382.jpg.png
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFVZUZoNlFsaEVSWGRPTjFsNlExZzJUV0ZGVWtOUmMwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MTkuNzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--2a6e0a01761f0fbcb74c7443d40e9193ee066a7d/8829382.jpg.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%228829382.jpg.png%22%3B+filename%2A%3DUTF-8%27%278829382.jpg.png" for 127.0.0.1 at 2018-03-11 10:05:19 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"8829382.jpg.png\"; filename*=UTF-8''8829382.jpg.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFVZUZoNlFsaEVSWGRPTjFsNlExZzJUV0ZGVWtOUmMwZ0dPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MTkuNzAwWiIsInB1ciI6ImJsb2Jfa2V5In19--2a6e0a01761f0fbcb74c7443d40e9193ee066a7d", "filename"=>"8829382.jpg"}
+[36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: TxXzBXDEwN7YzCX6MaERCQsH[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.9ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/11/edit" for 127.0.0.1 at 2018-03-11 10:05:22 +0100
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (6.2ms)
+  Rendered teams/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/teams/11" for 127.0.0.1 at 2018-03-11 10:05:25 +0100
+Processing by TeamsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tjz1SKUMFlZZVkfLLowwMs74SfOHNAgi5dhVg8LLCkNSQ+jkMN9KNlNa9i7rtMEgGrMTHiZSs86jGRJQNJdfKA==", "team"=>{"name"=>"Virtus Pro", "date_of_founding(3i)"=>"11", "date_of_founding(2i)"=>"3", "date_of_founding(1i)"=>"2018", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f0230d000c8 @tempfile=#<Tempfile:/tmp/RackMultipart20180311-6477-186fe9q.png>, @original_filename="Virtus_Pro.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"team[image]\"; filename=\"Virtus_Pro.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Save", "id"=>"11"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Destroy (1.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/teams_controller.rb:35
+[36m  Disk Storage (2.9ms) [0m[32mUploaded file to key: CmHEmwmWBXgnfxsuf9uZM4Zc (checksum: GtAvhK5Dtzrw03G2snD2YQ==)[0m
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "CmHEmwmWBXgnfxsuf9uZM4Zc"], ["filename", "Virtus_Pro.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 83012], ["checksum", "GtAvhK5Dtzrw03G2snD2YQ=="], ["created_at", "2018-03-11 09:05:25.684217"]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Team"], ["record_id", 11], ["blob_id", 3], ["created_at", "2018-03-11 09:05:25.686753"]]
+  ↳ app/controllers/teams_controller.rb:35
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: c80b17eb-f56a-460d-ab05-2f0a8e254ffe) to Async(default) with arguments: #<GlobalID:0x00007f023173d4c8 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/2>>
+  [1m[36mTeam Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" != ? AND "teams"."name" = ? LIMIT ?[0m  [["id", 11], ["name", "Virtus Pro"], ["LIMIT", 1]]
+  ↳ app/models/team.rb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Update All (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = '2018-03-11 09:05:25.688102' WHERE "teams"."id" = ?[0m  [["id", 11]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+  ↳ app/controllers/teams_controller.rb:35
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe] Performing ActiveStorage::PurgeJob (Job ID: c80b17eb-f56a-460d-ab05-2f0a8e254ffe) from Async(default) with arguments: #<GlobalID:0x00007f02317e6fc8 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe] [36m  Disk Storage (2.5ms) [0m[31mDeleted file from key: TxXzBXDEwN7YzCX6MaERCQsH[0m
+  [1m[35m (120.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe] [36m  Disk Storage (0.1ms) [0m[31mDeleted files by key prefix: variants/TxXzBXDEwN7YzCX6MaERCQsH/[0m
+  ↳ app/controllers/teams_controller.rb:35
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b) to Async(default) with arguments: #<GlobalID:0x00007f02318c0368 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/3>>
+Redirected to http://localhost:3000/teams/11
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Completed 302 Found in 161ms (ActiveRecord: 124.3ms)
+
+
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   [1m[36mActiveStorage::Blob Destroy (0.2ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ?[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b] Performing ActiveStorage::AnalyzeJob (Job ID: 8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b) from Async(default) with arguments: #<GlobalID:0x00007f02319c4958 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   [1m[35m (63.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::PurgeJob] [c80b17eb-f56a-460d-ab05-2f0a8e254ffe] Performed ActiveStorage::PurgeJob (Job ID: c80b17eb-f56a-460d-ab05-2f0a8e254ffe) from Async(default) in 95.08ms
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b]   [1m[36mActiveStorage::Blob Update (0.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Started GET "/teams/11" for 127.0.0.1 at 2018-03-11 10:05:25 +0100
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b]   [1m[35m (71.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b]   ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b] Performed ActiveStorage::AnalyzeJob (Job ID: 8f4aa57c-02bc-4eef-b8ac-f2bd8f24c57b) from Async(default) in 88.81ms
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f0a40ec0c68fe5d4ca816d043c8308ad7468047/Virtus_Pro.png" for 127.0.0.1 at 2018-03-11 10:05:26 +0100
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f0a40ec0c68fe5d4ca816d043c8308ad7468047", "filename"=>"Virtus_Pro"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: CmHEmwmWBXgnfxsuf9uZM4Zc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MjYuMDg5WiIsInB1ciI6ImJsb2Jfa2V5In19--505fc872ce41bdaf38fb90a8f95d2a30726c73c5/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MjYuMDg5WiIsInB1ciI6ImJsb2Jfa2V5In19--505fc872ce41bdaf38fb90a8f95d2a30726c73c5/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MjYuMDg5WiIsInB1ciI6ImJsb2Jfa2V5In19--505fc872ce41bdaf38fb90a8f95d2a30726c73c5/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png" for 127.0.0.1 at 2018-03-11 10:05:26 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Virtus_Pro.png\"; filename*=UTF-8''Virtus_Pro.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaDFEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTUdPZ1pGVkE9PSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTA6MjYuMDg5WiIsInB1ciI6ImJsb2Jfa2V5In19--505fc872ce41bdaf38fb90a8f95d2a30726c73c5", "filename"=>"Virtus_Pro"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: CmHEmwmWBXgnfxsuf9uZM4Zc[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (0.8ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/11" for 127.0.0.1 at 2018-03-11 10:06:28 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 180ms (Views: 161.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rails/active_storage/variants/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f0a40ec0c68fe5d4ca816d043c8308ad7468047/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--14b87df40e490b64af18b1a80fd23faeed3d13cf/Virtus_Pro.png" for 127.0.0.1 at 2018-03-11 10:06:28 +0100
+Processing by ActiveStorage::VariantsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f0a40ec0c68fe5d4ca816d043c8308ad7468047", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--14b87df40e490b64af18b1a80fd23faeed3d13cf", "filename"=>"Virtus_Pro"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/msegun/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/CmHEmwmWBXgnfxsuf9uZM4Zc/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978 (no)[0m
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: variants/CmHEmwmWBXgnfxsuf9uZM4Zc/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978[0m
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: variants/CmHEmwmWBXgnfxsuf9uZM4Zc/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTE6MjguNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--14dc1290db93974f60e6722b79d4863ea8334844/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTE6MjguNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--14dc1290db93974f60e6722b79d4863ea8334844/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png
+Completed 302 Found in 50ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTE6MjguNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--14dc1290db93974f60e6722b79d4863ea8334844/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png" for 127.0.0.1 at 2018-03-11 10:06:28 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Virtus_Pro.png\"; filename*=UTF-8''Virtus_Pro.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTFUMDk6MTE6MjguNzUwWiIsInB1ciI6ImJsb2Jfa2V5In19--14dc1290db93974f60e6722b79d4863ea8334844", "filename"=>"Virtus_Pro"}
+[36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: variants/CmHEmwmWBXgnfxsuf9uZM4Zc/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 10:06:30 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/10" for 127.0.0.1 at 2018-03-11 10:06:32 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 10:06:33 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams/11" for 127.0.0.1 at 2018-03-11 10:06:34 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-11 10:06:35 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:20
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:41
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:41
+  Rendered teams/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.9ms)
+
+
