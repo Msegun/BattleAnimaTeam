@@ -1,4 +1,12 @@
-<p id="notice" class="text-center"><%= notice %></p>
+<p id="notice" class="text-center"><%= modified_notice %></p>
+
+<% content_for :navbar do %>
+     <%= render 'navbarindex' %>
+<% end %>
+
+<% content_for :footer do %>
+     <%= render 'footerindex' %>
+<% end %>
 
 <div class="container">
     <div class="d-inline-block">
@@ -6,21 +14,8 @@
     </div>
     <br/>
 
-    <div class="d-inline-block float-right" style="margin-top: 10px;">
-        <%= link_to 'Add Team', new_team_path, :class => "btn btn-primary btn-sm" %>
-    </div>
-
     <div class="d-inline-block float-left" style="margin-top: 10px;">
-        <!-- teams search -->
-        <%= form_tag(teams_path, :method => "get", id: "search-form") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search for teams" %>
-          <%= submit_tag "Search", :name => nil, :class => "btn btn-primary btn-sm" %>
-        <% end %>
-
-        <% if @teams.blank? %>
-          <h6>There are no teams which name contains '<%= params[:search] %>'.</h6>
-        <% end %>
-        <!-- end of teams search -->
+        <%= link_to 'Add Team', new_team_path, :class => "btn btn-primary btn-sm" %>
     </div>
 
     <table class="table table-stripped table-hover index indexborders">

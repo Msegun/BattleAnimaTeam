@@ -1,11 +1,15 @@
-<p id="notice" class="text-center"><%= notice %></p>
+<p id="notice" class="text-center"><%= modified_notice %></p>
+
+<% content_for :footer do %>
+     <%= render 'footerindex' %>
+<% end %>
 
 <div class="container">
     <div class="d-inline-block">
         <h1>Match History</h1>
     </div>
     <br/>
-    <div class="d-inline-block float-right" style="margin-top: 10px;">
+    <div class="d-inline-block float-left" style="margin-top: 10px;">
         <%= link_to 'Add Match', new_match_path, :class => "btn btn-primary btn-sm" %>
     </div>
 
