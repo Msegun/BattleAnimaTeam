@@ -36,10 +36,9 @@
     <%= yield %>
   </body>
 
-  <footer>
-    <% if content_for?(:footer) %>
-      <%= yield(:footer) %>
-    <% else %>
-    <% end %>
+  <footer class="customfooter">
+    <hr />
+    <p style="text-align: center;">&copy; 2018. <a href="http://blog.counter-strike.net/" title="CS:GO">CS:GO</a> CRUD by Animal Crazy Team</p>
   </footer>
+
 </html>
