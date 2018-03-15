@@ -12,23 +12,22 @@
     </div>
 
     <div class="divrightoriented">
-        <!-- teams search -->
         <%= form_tag(players_path, :method => "get", id: "search-form") do %>
           <%= text_field_tag :search, params[:search], placeholder: "Search for players" %>
-          <!-- <%= submit_tag "Search", :name => nil, :class => "btn btn-search btn-sm" %> -->
-
-          <%= button_tag(type: 'submit', class: "btn btn-search btn-sm") do %>
-            <span class='fa fa-search'></span>
-          <% end %>
+          <div class="btn-group minebtn btn-sm" role="group">
+            <%= button_tag(type: 'submit', class: "btn btn-search btn-sm") do %>
+              <span class='fa fa-search'></span>
+            <% end %>
+            <%= link_to(raw('<span class="fa fa-times"></span>'), players_path, class: 'btn btn-custom minebtn btn-sm') %>
+          </div>
         <% end %>
 
         <% if @players.blank? && Player.count != 0 %>
-          <h6>There are no teams which name contains '<%= params[:search] %>' <b><a href="/teams">Refresh</a></b></h6>
+          <h6>There are no teams which name contains '<%= params[:search] %>' &emsp;</h6>
         <% end %>
         <% if Player.count == 0 %>
-          There are no games
+          There are no games &emsp;
         <% end %>
-        <!-- end of teams search -->
     </div>
   </div>
 </nav>
