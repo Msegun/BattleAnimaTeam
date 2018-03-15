@@ -39364,3 +39364,789 @@ puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-03-15 10:10:11 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 243ms (Views: 234.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/js/bootstrap.min.js" for 127.0.0.1 at 2018-03-15 10:10:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc1) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/js/bootstrap.min.js" for 127.0.0.1 at 2018-03-15 10:10:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc1) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2018-03-15 10:10:17 +0100
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY name asc[0m
+  ↳ app/views/players/index.html.erb:26
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  Rendered players/index.html.erb within layouts/application (47.8ms)
+Completed 200 OK in 94ms (Views: 76.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:10:18 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/9" for 127.0.0.1 at 2018-03-15 10:10:19 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/show.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:10:21 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams/11" for 127.0.0.1 at 2018-03-15 10:10:22 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/show.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 76ms (Views: 71.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/rails/active_storage/variants/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f0a40ec0c68fe5d4ca816d043c8308ad7468047/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--14b87df40e490b64af18b1a80fd23faeed3d13cf/Virtus_Pro.png" for 127.0.0.1 at 2018-03-15 10:10:22 +0100
+Processing by ActiveStorage::VariantsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f0a40ec0c68fe5d4ca816d043c8308ad7468047", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--14b87df40e490b64af18b1a80fd23faeed3d13cf", "filename"=>"Virtus_Pro"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/CmHEmwmWBXgnfxsuf9uZM4Zc/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978 (yes)[0m
+[36m  Disk Storage (9.3ms) [0m[34mGenerated URL for file at key: variants/CmHEmwmWBXgnfxsuf9uZM4Zc/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTU6MjIuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--4b73795b1edb4c832103b266ea52dce1c3ec8501/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTU6MjIuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--4b73795b1edb4c832103b266ea52dce1c3ec8501/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png
+Completed 302 Found in 12ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTU6MjIuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--4b73795b1edb4c832103b266ea52dce1c3ec8501/Virtus_Pro.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Virtus_Pro.png%22%3B+filename%2A%3DUTF-8%27%27Virtus_Pro.png" for 127.0.0.1 at 2018-03-15 10:10:22 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Virtus_Pro.png\"; filename*=UTF-8''Virtus_Pro.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlEYlVoRmJYZHRWMEpZWjI1bWVITjFaamwxV2swMFdtTXZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTU6MjIuOTAxWiIsInB1ciI6ImJsb2Jfa2V5In19--4b73795b1edb4c832103b266ea52dce1c3ec8501", "filename"=>"Virtus_Pro"}
+[36m  Disk Storage (1.2ms) [0m[34mDownloaded file from key: variants/CmHEmwmWBXgnfxsuf9uZM4Zc/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (2.2ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:10:27 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams/new" for 127.0.0.1 at 2018-03-15 10:10:29 +0100
+Processing by TeamsController#new as HTML
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (13.6ms)
+  Rendered teams/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/teams" for 127.0.0.1 at 2018-03-15 10:10:41 +0100
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/dGFq+aaZPQic5VtO/mCyKs2YywPFeqrKEBXYYzav4cdh3IvmMw9AyYyyCMzsW4vh66ai4sA45Lxuo2AvcYt8g==", "team"=>{"name"=>"Jakas", "date_of_founding(3i)"=>"15", "date_of_founding(2i)"=>"3", "date_of_founding(1i)"=>"2018", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f29d85bb770 @tempfile=#<Tempfile:/tmp/RackMultipart20180315-2931-1ux5ek1.png>, @original_filename="Screenshot_2018-03-14_22-56-17.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"team[image]\"; filename=\"Screenshot_2018-03-14_22-56-17.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Save"}
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: SiP6msKBniPtF2fkN9cdD2mU (checksum: byDtwyfI2iALUJLUGwiVuw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:25
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "SiP6msKBniPtF2fkN9cdD2mU"], ["filename", "Screenshot_2018-03-14_22-56-17.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 97416], ["checksum", "byDtwyfI2iALUJLUGwiVuw=="], ["created_at", "2018-03-15 09:10:41.508226"]]
+  ↳ app/controllers/teams_controller.rb:25
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teams_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:27
+  [1m[36mTeam Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" IS NOT NULL AND "teams"."name" = ? LIMIT ?[0m  [["name", "Jakas"], ["LIMIT", 1]]
+  ↳ app/models/team.rb:11
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/teams_controller.rb:27
+  Rendering teams/new.html.erb within layouts/application
+  Rendered teams/_form.html.erb (2.7ms)
+  Rendered teams/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 79ms (Views: 19.8ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/js/bootstrap.min.js" for 127.0.0.1 at 2018-03-15 10:10:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc1) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/teams" for 127.0.0.1 at 2018-03-15 10:10:45 +0100
+Processing by TeamsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84x8lzQ6k8IKdCull/31j5L7zYyttz5jtbvN07qx3OEBGKvpsAU28+a49dqLbmj17V2APi+r9gUGw2U+L6VQjA==", "team"=>{"name"=>"Jakasdsa", "date_of_founding(3i)"=>"15", "date_of_founding(2i)"=>"3", "date_of_founding(1i)"=>"2018"}, "commit"=>"Save"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:27
+  [1m[36mTeam Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" IS NOT NULL AND "teams"."name" = ? LIMIT ?[0m  [["name", "Jakasdsa"], ["LIMIT", 1]]
+  ↳ app/models/team.rb:11
+  [1m[36mTeam Create (0.2ms)[0m  [1m[32mINSERT INTO "teams" ("name", "date_of_founding", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jakasdsa"], ["date_of_founding", "2018-03-15"], ["created_at", "2018-03-15 09:10:45.403046"], ["updated_at", "2018-03-15 09:10:45.403046"]]
+  ↳ app/controllers/teams_controller.rb:27
+  [1m[35m (28.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teams_controller.rb:27
+Redirected to http://localhost:3000/teams/13
+Completed 302 Found in 34ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/teams/13" for 127.0.0.1 at 2018-03-15 10:10:45 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/teams/js/bootstrap.min.js" for 127.0.0.1 at 2018-03-15 10:10:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/teams/js/bootstrap.min.js"):
+  
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc1) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:11:31 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2018-03-15 10:11:35 +0100
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY name asc[0m
+  ↳ app/views/players/index.html.erb:26
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  Rendered players/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:11:36 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2018-03-15 10:11:37 +0100
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.1ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/views/matches/index.html.erb:24
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  Rendered matches/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 39ms (Views: 31.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2018-03-15 10:11:37 +0100
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY name asc[0m
+  ↳ app/views/players/index.html.erb:26
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  Rendered players/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:11:38 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2018-03-15 10:11:39 +0100
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY name asc[0m
+  ↳ app/views/players/index.html.erb:26
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  Rendered players/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2018-03-15 10:11:43 +0100
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY name asc[0m
+  ↳ app/views/players/index.html.erb:26
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:33
+  Rendered players/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:11:44 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2018-03-15 10:11:44 +0100
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.2ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  ↳ app/views/matches/index.html.erb:24
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:27
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/matches/index.html.erb:34
+  Rendered matches/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0@global/gems/rake-12.3.0/lib/rake/task.rb:251
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:13:17 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/index.html.erb:24
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:28
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:28
+  Rendered teams/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 144ms (Views: 134.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/js/bootstrap.min.js" for 127.0.0.1 at 2018-03-15 10:13:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc1) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/teams/10/edit" for 127.0.0.1 at 2018-03-15 10:13:19 +0100
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (4.7ms)
+  Rendered teams/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/teams/10" for 127.0.0.1 at 2018-03-15 10:13:23 +0100
+Processing by TeamsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y2KI/r2/kuIABustcidFjIUG3n/Uux2SQU9UQKdFYWfysry+98oPCK6TFNnT3ezRBPTOP8DhHMkg/u+yUJ/ooA==", "team"=>{"name"=>"Zzzz", "date_of_founding(3i)"=>"9", "date_of_founding(2i)"=>"3", "date_of_founding(1i)"=>"2018", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f0288816348 @tempfile=#<Tempfile:/tmp/RackMultipart20180315-3056-1h2dtgn.png>, @original_filename="Screenshot_2018-03-14_22-56-17.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"team[image]\"; filename=\"Screenshot_2018-03-14_22-56-17.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Save", "id"=>"10"}
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:35
+[36m  Disk Storage (2.3ms) [0m[32mUploaded file to key: GWvZ6rx7FVpzpi3eF6obb2iX (checksum: byDtwyfI2iALUJLUGwiVuw==)[0m
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "GWvZ6rx7FVpzpi3eF6obb2iX"], ["filename", "Screenshot_2018-03-14_22-56-17.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 97416], ["checksum", "byDtwyfI2iALUJLUGwiVuw=="], ["created_at", "2018-03-15 09:13:23.573274"]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Team"], ["record_id", 10], ["blob_id", 6], ["created_at", "2018-03-15 09:13:23.607097"]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[36mTeam Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "teams" WHERE "teams"."id" != ? AND "teams"."name" = ? LIMIT ?[0m  [["id", 10], ["name", "Zzzz"], ["LIMIT", 1]]
+  ↳ app/models/team.rb:11
+  [1m[36mTeam Update All (0.1ms)[0m  [1m[33mUPDATE "teams" SET "updated_at" = '2018-03-15 09:13:23.608065' WHERE "teams"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/teams_controller.rb:35
+  [1m[35m (18.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teams_controller.rb:35
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 579e5b68-5f83-42d3-b486-2b8897ce7a16) to Async(default) with arguments: #<GlobalID:0x00007f028a445c58 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/6>>
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16] Performing ActiveStorage::AnalyzeJob (Job ID: 579e5b68-5f83-42d3-b486-2b8897ce7a16) from Async(default) with arguments: #<GlobalID:0x00007f0268063f30 @uri=#<URI::GID gid://csgo/ActiveStorage::Blob/6>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16]   ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/teams/10
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16]   [1m[36mActiveStorage::Blob Update (4.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"width\":1920,\"height\":1080,\"analyzed\":true}"], ["id", 6]]
+Completed 302 Found in 247ms (ActiveRecord: 20.9ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16]   ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16]   [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16]   ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [579e5b68-5f83-42d3-b486-2b8897ce7a16] Performed ActiveStorage::AnalyzeJob (Job ID: 579e5b68-5f83-42d3-b486-2b8897ce7a16) from Async(default) in 139.25ms
+Started GET "/teams/10" for 127.0.0.1 at 2018-03-15 10:13:23 +0100
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:53
+  Rendering teams/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/show.html.erb:19
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Team"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/teams/show.html.erb:30
+  Rendered teams/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/variants/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--40f88af2e0310b34e67f17510cb51d638d1d28c4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--14b87df40e490b64af18b1a80fd23faeed3d13cf/Screenshot_2018-03-14_22-56-17.png" for 127.0.0.1 at 2018-03-15 10:13:23 +0100
+Processing by ActiveStorage::VariantsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--40f88af2e0310b34e67f17510cb51d638d1d28c4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNTVRBd2VERXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--14b87df40e490b64af18b1a80fd23faeed3d13cf", "filename"=>"Screenshot_2018-03-14_22-56-17"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /home/mika/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.1ms) [0m[34mChecked if file exists at key: variants/GWvZ6rx7FVpzpi3eF6obb2iX/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978 (no)[0m
+Started GET "/teams/js/bootstrap.min.js" for 127.0.0.1 at 2018-03-15 10:13:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/teams/js/bootstrap.min.js"):
+  
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc1) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+[36m  Disk Storage (8.3ms) [0m[32mUploaded file to key: variants/GWvZ6rx7FVpzpi3eF6obb2iX/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978[0m
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: variants/GWvZ6rx7FVpzpi3eF6obb2iX/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlIVjNaYU5uSjROMFpXY0hwd2FUTmxSalp2WW1JeWFWZ3ZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTg6MjMuOTkzWiIsInB1ciI6ImJsb2Jfa2V5In19--6e8b03f32f20afced051f5b9020fe2306a489d91/Screenshot_2018-03-14_22-56-17.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screenshot_2018-03-14_22-56-17.png%22%3B+filename%2A%3DUTF-8%27%27Screenshot_2018-03-14_22-56-17.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlIVjNaYU5uSjROMFpXY0hwd2FUTmxSalp2WW1JeWFWZ3ZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTg6MjMuOTkzWiIsInB1ciI6ImJsb2Jfa2V5In19--6e8b03f32f20afced051f5b9020fe2306a489d91/Screenshot_2018-03-14_22-56-17.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screenshot_2018-03-14_22-56-17.png%22%3B+filename%2A%3DUTF-8%27%27Screenshot_2018-03-14_22-56-17.png
+Completed 302 Found in 122ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlIVjNaYU5uSjROMFpXY0hwd2FUTmxSalp2WW1JeWFWZ3ZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTg6MjMuOTkzWiIsInB1ciI6ImJsb2Jfa2V5In19--6e8b03f32f20afced051f5b9020fe2306a489d91/Screenshot_2018-03-14_22-56-17.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22Screenshot_2018-03-14_22-56-17.png%22%3B+filename%2A%3DUTF-8%27%27Screenshot_2018-03-14_22-56-17.png" for 127.0.0.1 at 2018-03-15 10:13:23 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"Screenshot_2018-03-14_22-56-17.png\"; filename*=UTF-8''Screenshot_2018-03-14_22-56-17.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlIVjNaYU5uSjROMFpXY0hwd2FUTmxSalp2WW1JeWFWZ3ZNR0UwT0RRek56RXhNek00WWpCalltRTBOakF5T1RGak56WXpOV1E0WTJRNU5URTFabVZpTWpZNFl6Qm1ZemxqTmpFME56RXhNV00zWldFeVpqazNPQVk2QmtWVSIsImV4cCI6IjIwMTgtMDMtMTVUMDk6MTg6MjMuOTkzWiIsInB1ciI6ImJsb2Jfa2V5In19--6e8b03f32f20afced051f5b9020fe2306a489d91", "filename"=>"Screenshot_2018-03-14_22-56-17"}
+[36m  Disk Storage (0.0ms) [0m[34mDownloaded file from key: variants/GWvZ6rx7FVpzpi3eF6obb2iX/0a4843711338b0cba460291c7635d8cd9515feb268c0fc9c6147111c7ea2f978[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (1.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:14:34 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/_navbarindex.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "teams"[0m
+  ↳ app/views/teams/_navbarindex.html.erb:28
+  Rendered teams/_navbarindex.html.erb (2.0ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:32
+  Rendered teams/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2018-03-15 10:14:35 +0100
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY name asc[0m
+  ↳ app/views/players/_navbarindex.html.erb:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players"[0m
+  ↳ app/views/players/_navbarindex.html.erb:28
+  Rendered players/_navbarindex.html.erb (9.3ms)
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:37
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:37
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:37
+  Rendered players/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:14:37 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/_navbarindex.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "teams"[0m
+  ↳ app/views/teams/_navbarindex.html.erb:28
+  Rendered teams/_navbarindex.html.erb (2.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:32
+  Rendered teams/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2018-03-15 10:14:37 +0100
+Processing by PlayersController#index as HTML
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" ORDER BY name asc[0m
+  ↳ app/views/players/_navbarindex.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players"[0m
+  ↳ app/views/players/_navbarindex.html.erb:28
+  Rendered players/_navbarindex.html.erb (1.6ms)
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:37
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:37
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/players/index.html.erb:37
+  Rendered players/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/players?utf8=%E2%9C%93&search=fsddfs&button=" for 127.0.0.1 at 2018-03-15 10:14:39 +0100
+Processing by PlayersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"fsddfs", "button"=>""}
+  Rendering players/index.html.erb within layouts/application
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE (name LIKE '%fsddfs%') ORDER BY created_at DESC[0m
+  ↳ app/views/players/_navbarindex.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players"[0m
+  ↳ app/views/players/_navbarindex.html.erb:25
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "players"[0m
+  ↳ app/views/players/_navbarindex.html.erb:28
+  Rendered players/_navbarindex.html.erb (2.2ms)
+  Rendered players/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/js/bootstrap.min.js" for 127.0.0.1 at 2018-03-15 10:14:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0.rc1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0.rc1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0.rc1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0.rc1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0.rc1) lib/rails/engine.rb:524:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/teams" for 127.0.0.1 at 2018-03-15 10:14:40 +0100
+Processing by TeamsController#index as HTML
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY name asc[0m
+  ↳ app/views/teams/_navbarindex.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "teams"[0m
+  ↳ app/views/teams/_navbarindex.html.erb:28
+  Rendered teams/_navbarindex.html.erb (1.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 9]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 13]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 11]]
+  ↳ app/views/teams/index.html.erb:32
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 10]]
+  ↳ app/views/teams/index.html.erb:32
+  Rendered teams/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.9ms)
+
+
